@@ -1,0 +1,28 @@
+# Autosave files
+*.asv
+*.m~
+*.autosave
+
+# Compiled MEX binaries
+*.mex*
+
+# Simulink code generation folders
+slprj/
+sccprj/
+codegen/
+
+# Simulink cache/cache files
+*.slxc
+
+# Derived or p‑code files
+*.p
+
+# Packaged apps and toolboxes
+*.mlappinstall
+*.mltbx
+
+# Deployable archives
+*.ctf
+
+# Generated helpsearch
+helpsearch*/
