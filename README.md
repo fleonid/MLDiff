@@ -1,4 +1,4 @@
-# MATLAB Code for Maximum-Likelihood-Based Differentiator Using Quadratic and Zero-Order Optimal Splines
+# MATLAB Code for Maximum-Likelihood-Estimator-Based Differentiator (MLE_Diff) Using Quadratic and Zero-Order Optimal Splines
 
 This repository contains MATLAB code supporting the results in:
 
