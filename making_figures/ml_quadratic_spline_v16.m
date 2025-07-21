@@ -1,6 +1,7 @@
 % FILE: ml_quadratic_spline_v16.m
 % DESCRIPTION:
-%   Runs the full pipeline for maximum-likelihood-based quadratic spline differentiation, including data generation, spline fitting, and comparison with other methods.
+%   Executes the full pipeline for smoothing quadratic-spline-based differentiation.
+%   Generates synthetic data, applies spline-based differentiation, and compares with other methods.
 %
 % CONTEXT:
 %   Based on the method described in:
@@ -8,10 +9,10 @@
 %   by K. E. Avrachenkov and L. B. Freidovich, submitted to IEEE TAC, 2025.
 %
 % INPUTS:
-%   None (parameters are set within the script)
+%   None directly; parameters such as sigma, h, t_initial, t_final are set in the script.
 %
 % OUTPUTS:
-%   Plots and printed performance metrics
+%   Plots comparing analytical and estimated derivatives using various methods.
 %
 % AUTHOR:
 %   Leonid B. Freidovich (leonid.freidovich@umu.se)
