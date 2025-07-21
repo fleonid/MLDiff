@@ -1,2 +1,2 @@
 # MLDiff
-Maximum-Likelyhood-based differentiator
+Maximum-Likelihood-based differentiator
