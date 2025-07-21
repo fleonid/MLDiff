@@ -1,8 +1,23 @@
-%%
-%   smoothing zero-order spline for z, following NumDiff_v23 
-%   created 2025-06-04
-%   modified 2025-07-09, following NumDiff_v26
+% FILE: ml_zero_spline_v1.m
+% DESCRIPTION:
+%   Implements the zero-order spline-based differentiator and compares it with Levant's method.
 %
+% CONTEXT:
+%   Based on the method described in:
+%   "Numerical Differentiation under Coarse Non-uniform Sampling and Gaussian Noise"
+%   by K. E. Avrachenkov and L. B. Freidovich, submitted to IEEE TAC, 2025.
+%
+% INPUTS:
+%   None (parameters are set within the script)
+%
+% OUTPUTS:
+%   Plots and printed performance metrics
+%
+% AUTHOR:
+%   Leonid B. Freidovich (leonid.freidovich@umu.se)
+%
+% LAST UPDATED:
+%   2025-07-18
  clearvars
  close all
 %
