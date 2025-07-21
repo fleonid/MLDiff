@@ -1,4 +1,34 @@
-function [K,t_K,h_K,x_K,dx_K,y_K,L0num,L1num,L2num,t,x,dx]=make_data(h,dh,t_initial,t_final,epsilon)
+% FILE: make_data.m
+% DESCRIPTION:
+%   Generates synthetic signal data with non-uniform sampling and Gaussian noise.
+%
+% INPUTS:
+%   h         - average sampling step
+%   dh        - relative variation in sampling step
+%   t_initial - initial time
+%   t_final   - final time
+%   sigma   - standard deviation of Gaussian noise
+%
+% OUTPUTS:
+%   K      - number of samples
+%   t_K    - sample time points
+%   h_K    - actual sampling intervals
+%   x_K    - true signal values at t_K
+%   dx_K   - true derivative values at t_K
+%   y_K    - noisy measurements
+%   L0num  - max absolute value of signal
+%   L1num  - max absolute value of derivative
+%   L2num  - max absolute value of second derivative
+%   t      - fine time grid
+%   x      - true signal on fine grid
+%   dx     - true derivative on fine grid
+%
+% AUTHOR:
+%   Leonid B. Freidovich
+%
+% LAST UPDATED:
+%   2025-07-18
+function [K,t_K,h_K,x_K,dx_K,y_K,L0num,L1num,L2num,t,x,dx]=make_data(h,dh,t_initial,t_final,sigma)
 %
 h_max=(1+dh)*h;
 h_min=(1-dh)*h;
@@ -29,7 +59,7 @@ n_K=zeros(K,1);
 %
 for i=1:K
   [x_K(i),dx_K(i)]=x_fun(t_K(i));
-  n_K(i)=epsilon*randn(); 
+  n_K(i)=sigma*randn(); 
   y_K(i)=x_K(i)+n_K(i);
 end
 %
