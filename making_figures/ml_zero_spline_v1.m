@@ -8,10 +8,10 @@
 %   by K. E. Avrachenkov and L. B. Freidovich, submitted to IEEE TAC, 2025.
 %
 % INPUTS:
-%   None (parameters are set within the script)
+%   None directly; parameters such as epsilon, h, t_initial, t_final are set in the script.
 %
 % OUTPUTS:
-%   Plots and printed performance metrics
+%   Plots comparing analytical and estimated derivatives using zero-order spline and Levant's method.
 %
 % AUTHOR:
 %   Leonid B. Freidovich (leonid.freidovich@umu.se)
