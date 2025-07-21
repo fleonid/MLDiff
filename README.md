@@ -12,7 +12,7 @@ submitted to *IEEE Transactions on Automatic Control*, 2025.
 
 ## 📄 Description
 
-This code implements a **maximum-likelihood-based numerical differentiation method** using **smoothing quadratic splines** and **zero-order optimal splines**. It is designed to estimate the derivative of a signal measured under **coarse, non-uniform sampling** and corrupted by **Gaussian noise**.
+This code implements a **maximum-likelihood-based numerical differentiation method** using **optimal** **smoothing quadratic splines** and **zero-order splines**. It is designed to estimate the derivative of a signal measured under **coarse, non-uniform sampling** and corrupted by **Gaussian noise**.
 
 The implementation reproduces the key results and figures described in the above article, including comparisons with classical differentiators and performance under various noise and sampling conditions.
 
