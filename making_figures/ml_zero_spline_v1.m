@@ -4,8 +4,8 @@
 %
 % CONTEXT:
 %   Based on the method described in:
-%   "Numerical Differentiation under Coarse Non-uniform Sampling and Gaussian Noise"
-%   by K. E. Avrachenkov and L. B. Freidovich, submitted to IEEE TAC, 2025.
+%   "Derivative Estimation from Coarse, Irregular, Noisy Samples: An MLE–Spline Approach"
+%   by K. E. Avrachenkov and L. B. Freidovich, 2025.
 %
 % INPUTS:
 %   None directly; parameters such as epsilon, h, t_initial, t_final are set in the script.
