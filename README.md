@@ -1,10 +1,9 @@
-# MATLAB Code for Maximum-Likelihood-Estimator-Based Differentiator (MLE_Diff) Using Quadratic and Zero-Order Optimal Splines
+# MATLAB Code for Maximum-Likelihood-Estimator-Based Differentiator (MLEDiff) Using Quadratic and Zero-Order Optimal Splines
 
 This repository contains MATLAB code supporting the results in:
 
-**"Numerical Differentiation under Coarse Non-uniform Sampling and Gaussian Noise"**  
-by *Konstantin E. Avrachenkov* and *Leonid B. Freidovich*,  
-submitted to *IEEE Transactions on Automatic Control*, 2025.
+**"Derivative Estimation from Coarse, Irregular, Noisy Samples: An MLE–Spline Approach"**  
+by *Konstantin E. Avrachenkov* and *Leonid B. Freidovich*, 2025.
 
 📧 Contact: [leonid.freidovich@umu.se](mailto:leonid.freidovich@umu.se)
 
