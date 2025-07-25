@@ -5,7 +5,7 @@
 % CONTEXT:
 %   Based on the method described in:
 %   "Numerical Differentiation under Coarse Non-uniform Sampling and Gaussian Noise"
-%   by K. E. Avrachenkov and L. B. Freidovich, submitted to IEEE TAC, 2025.
+%   by K. E. Avrachenkov and L. B. Freidovich, 2025.
 %
 % INPUTS:
 %   None (parameters are set within the script)
