@@ -26,6 +26,7 @@ set(0, 'DefaultLegendInterpreter', 'latex');
 set(0, 'DefaultAxesLineWidth', 1.5); 
 set(0, 'DefaultAxesFontSize', 14);
 set(0, 'DefaultTextFontSize', 14);
+set(0, 'DefaultFigureWindowState', 'maximized');
 %
 % diary ml_quadratic_v16.txt
  disp(' '), disp(datetime('now')),
@@ -136,11 +137,11 @@ end
  Xhgo=hgo_step(h_K,y_K,L1num,eps_hgo);
 %
  figure,
- plot(t,dx,'r','LineWidth',2),hold on,
+ plot(t,dx,'r','LineWidth',3),hold on,
  plot(t_K,dx_K,'r.',...
  t_K,XL,'c.--',t_K,Xhgo,'g.--',...
     t,z,'k',t_K,z_K,'k.',... 
-    t,zc,'b',t_K(1:end-1),z_Kc,'b.','LineWidth',1), grid,
+    t,zc,'b',t_K(1:end-1),z_Kc,'b.','LineWidth',2), grid,
 legend_strings = { ...
     '$z(t)=dx/dt$ (analytical)', ...
     '', ...
@@ -160,20 +161,20 @@ title( ...
    '$ and noise variance $\sigma=' num2str(sigma) '$'], ...
   'Interpreter', 'latex')
 
- disp(' '), disp('Variances:'), disp(' ')
+ disp(' '), disp('RMSEs:'), disp(' ')
 % 
 t_tr=floor(length(XL)/3);
-disp(' - Levant'), disp(sqrt(mean((XL(t_tr:end)-dx_K(t_tr:end)).^2))),
+disp(' - Super Twisting'), disp(sqrt(mean((XL(t_tr:end)-dx_K(t_tr:end)).^2))),
 disp(' - HGO'), disp(sqrt(mean((Xhgo(t_tr:end)-dx_K(t_tr:end)).^2))),
-disp(' - zero-order Spline'), disp(sqrt(mean((z_Kc(t_tr-1:end)-dx_K(t_tr:end)).^2))),
+disp(' - Zero-Order Spline'), disp(sqrt(mean((z_Kc(t_tr-1:end)-dx_K(t_tr:end)).^2))),
 disp(' - Quadratic Spline'), disp(sqrt(mean((z_K(t_tr:end)-dx_K(t_tr:end)).^2))),
 
 %return
 %
- figure,
+ figure, axis equal
  subplot(221),
  plot(t,dx,'r',t_K,dx_K,'r.','LineWidth',3), hold on,
- plot(t,z,'k',t_K,z_K,'k.','LineWidth',1), grid,
+ plot(t,z,'k',t_K,z_K,'k.','LineWidth',2), grid,
 legend( ...
     '$z(t)=dx/dt$ (analytical)', ...
     '', ... % '$dx/dt$ at $t_k$', ...
@@ -182,11 +183,12 @@ legend( ...
     'Location', 'south', 'Interpreter', 'latex');
   xlabel('$t$','Interpreter','latex'), ylabel('$z(t)$ and $\hat z(t)$','Interpreter','latex'),
     title(['Approximation of derivatives with average sampling $h=' num2str(h) '$'], 'Interpreter', 'latex')
+    ylim([-2,2]);
 %
  subplot(222),
  plot(t,dx,'r','LineWidth',3),hold on,
  plot(t_K,dx_K,'r.',...
-    t,zc,'b',t_K(1:end-1),z_Kc,'b.','LineWidth',1), grid,
+    t,zc,'b',t_K(1:end-1),z_Kc,'b.','LineWidth',2), grid,
 legend( ...
     '$z(t)=dx/dt$ (analytical)', ...
     '', ... % '$dx/dt$ at $t_k$', ...
@@ -194,12 +196,13 @@ legend( ...
     '', ... % 'quadratic spline at $t_k$', ...
     'Location', 'south', 'Interpreter', 'latex');
   xlabel('$t$','Interpreter','latex'), ylabel('$z(t)$ and $\hat z(t)$','Interpreter','latex'),
-title(['and noise variance $\sigma=' num2str(sigma) '$'], 'Interpreter', 'latex')
+ title(['and noise variance $\sigma=' num2str(sigma) '$'], 'Interpreter', 'latex')
+ ylim([-2,2]);
 %
  subplot(223),
  plot(t,dx,'r','LineWidth',3),hold on,
  plot(t_K,dx_K,'r.',...
- t_K,XL,'c.--','LineWidth',1), grid,
+ t_K,XL,'c.--','LineWidth',2), grid,
  legend('$z(t)=dx/dt$ (analytical)','',...%'$dx/dt$ at $t_k$',...
     'Levant diff. (super-twisting)','Location','south','Interpreter','latex');
   xlabel('$t$','Interpreter','latex'), ylabel('$z(t)$ and $\hat z(t)$','Interpreter','latex'),
@@ -209,7 +212,7 @@ title(['and noise variance $\sigma=' num2str(sigma) '$'], 'Interpreter', 'latex'
  subplot(224),
  plot(t,dx,'r','LineWidth',3),hold on,
  plot(t_K,dx_K,'r.',...
-t_K,Xhgo,'g.--','LineWidth',1), grid,
+t_K,Xhgo,'g.--','LineWidth',2), grid,
  legend('$z(t)=dx/dt$ (analytical)','',...%'$dx/dt$ at $t_k$',...
   ['HGO with $\varepsilon=' num2str(eps_hgo) '$'],...
     'Location','south','Interpreter','latex');
