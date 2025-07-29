@@ -22,8 +22,9 @@ _Last updated: **2025-07-18**_
 ## 📦 Files
 
 ### 🔹 Primary Scripts
-- ml_quadratic_spline_v16.m — Full implementation of the quadratic-spline-based differentiator, including data generation, spline fitting, and comparison with other methods.
+- ml_quadratic_spline_v16.m — Full implementation of the quadratic-spline-based nd zero-order-spline-based differentiators, including data generation, spline fitting, and comparison with two other methods (generates figures for the paper referenced above).
 - ml_zero_spline_v1.m — Implementation of the zero-order spline-based differentiator.
+- rec_mle_splines_v2.m — Full implementation of the recursive quadratic-spline-based and zero-order-spline-based differentiators, including data generation, spline fitting, and comparison with ttwo other methods.
 
 ### 🔹 Signal Generation
 - make_data.m — Generates synthetic signals with non-uniform sampling and Gaussian noise.
@@ -36,13 +37,13 @@ _Last updated: **2025-07-18**_
 - z_from_p.m — Computes derivative estimates from spline parameters.
 - interp_z_from_z_K.m — Interpolates spline-based derivative estimates over time.
 
-### 🔹 Observer-Based Methods
-- `levant_step.m` — Implements Levant’s super-twisting differentiator.
-- `hgo_step.m` — Implements a high-gain observer (HGO) for derivative estimation.
+### 🔹 Other Differentiation Methods for Compsrision
+- levant_step.m — Implements Levant’s first-order super-twisting differentiator (requires upper bound on second derivative), discretized using Euler's method.
+- hgo_step.m — Implements a high-gain observer (HGO) for derivative estimation (requires tuning of a single small parameter, uses upper bound on the estimated first derivative for a protactive saturation), discretized using Euler's method.
 
 ### 🔹 Recursive and Update Utilities
-- update_quadratic_spline.m — Efficient recursive update of spline estimates using matrix identities.
-- updateQC.m — Computes updates to spline matrices for recursive estimation.
+- update_quadratic_spline.m — Efficient (optimized for speed in Matlab) recursive update of quadratic spline estimates using matrix identities.
+- updateQC.m — Computes updates to second-order spline matrices for recursive estimation (for update of zero-order spline matrices see rec_mle_splines_v2.m).
 
 ---
 
@@ -57,6 +58,6 @@ _Last updated: **2025-07-18**_
 
 ## 🖋 Citation
 
-If you use this code in your research or publications, please cite the article once published.
+If you use this code in your research or publications, please cite either the article, once published, or this depository: https://github.com/fleonid/MLEdiff/
 
 ---
