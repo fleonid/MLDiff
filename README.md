@@ -34,8 +34,8 @@ _Last updated: **2025-07-29**_
 - quadratic_spline_step_QC.m — Constructs matrices for quadratic spline smoothing.
 - quadratic_spline_step_new.m — Alternative formulation of the quadratic spline method.
 - zero_order_spline_step_QC.m — Constructs matrices for zero-order spline smoothing.
-- z_from_p.m — Computes derivative estimates from spline parameters.
-- interp_z_from_z_K.m — Interpolates spline-based derivative estimates over time.
+- z_from_p.m — Computes all the parameters of derivative estimates using quadratic spline parameters.
+- interp_z_from_z_K.m — Interpolates quadratic-spline-based derivative estimates over time.
 
 ### 🔹 Other Differentiation Methods for Compsrision
 - levant_step.m — Implements Levant’s first-order super-twisting differentiator (requires upper bound on second derivative), discretized using Euler's method.
