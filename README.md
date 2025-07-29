@@ -15,7 +15,7 @@ This code implements a **maximum-likelihood-based numerical differentiation meth
 
 The implementation reproduces the key results and figures described in the above article, including comparisons with classical differentiators and performance under various noise and sampling conditions.
 
-_Last updated: **2025-07-18**_
+_Last updated: **2025-07-29**_
 
 ---
 
